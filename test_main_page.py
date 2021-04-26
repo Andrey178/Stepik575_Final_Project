@@ -1,10 +1,9 @@
-import time
+def go_to_login_page(browser):
+    login_link = browser.find_element_by_css_selector("#login_link")
+    login_link.click()
 
-import pytest
 
-
-def test_add_to_basket_button_is_present(browser, link):
+def test_guest_can_go_to_login_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/"
     browser.get(link)
-    time.sleep(30)
-    answer = browser.find_elements_by_xpath("//button[contains(@class, 'btn-add-to-basket')]")
-    assert answer, "No 'Add to basket' button"
+    go_to_login_page(browser)
