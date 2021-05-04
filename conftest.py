@@ -11,7 +11,7 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="function", autouse=True)
 def link():
-    link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
+    link = 'http://selenium1py.pythonanywhere.com/'
     yield link
 
 
